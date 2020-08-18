@@ -13,6 +13,18 @@
   }
 }
 
+.eq-content{
+  border-width:5px;  
+  border-style:ridge;
+  border-radius: .35rem;
+  background-color: #f5f7fa;
+  border-width: 2px;
+  max-width: 600px;
+  width: auto;
+  margin: auto;
+
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
