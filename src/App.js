@@ -5,7 +5,7 @@ import Earthquake from './components/earthquake';
 function App() {
   return (
     <div className="App">
-      <h1>Recent Earthquakes(>=4)</h1>
+      <h1>Recent Earthquakes</h1>
       <Earthquake/>
     </div>
   );
