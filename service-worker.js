@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-earthquakes/precache-manifest.41b49c5893627d2eb01ead999c588e51.js"
+  "/react-earthquakes/precache-manifest.bc3707b7b4a696164c2dc0eabf3467ac.js"
 );
 
 self.addEventListener('message', (event) => {
