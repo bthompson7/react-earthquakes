@@ -22,7 +22,7 @@ export default class Earthquake extends React.Component {
 
     async fetchEarthquakeData(){
         this.setState({loading:true})
-        fetch('https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&endtime&minmagnitude=4', {
+        fetch('https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&endtime&minmagnitude=3', {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
           }).then(response => response.json())
@@ -46,22 +46,24 @@ export default class Earthquake extends React.Component {
         if(this.state.loading){
             return (
                 <div>
+                <h3>Loading Recent Earthquakes...</h3>
                 <Spinner animation="border" role="status">
                 </Spinner>
-                <p>Fetching Recent Earthquakes...</p>
                 </div>
                 
             )
         }
         return (
+
             <div>
+
             {this.state.posts.map(post =>
             (
             <div class="eq-content">
                 <div class="info">
             {this.unixToDate(post['properties']['time'])}
             <h2>{post['properties']['title']}</h2>
-            <Button href={post['properties']['url'] + "/map"} variant="primary">View Map</Button>
+            <Button href={post['properties']['url'] + "/map"} target="_blank" variant="primary">View On USGS Map</Button>
             </div>
              </div>))
     
