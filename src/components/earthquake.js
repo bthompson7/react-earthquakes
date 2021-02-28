@@ -37,12 +37,24 @@ export default class Earthquake extends React.Component {
     
     unixToDate(unixDate){
         var myDate = new Date(unixDate)
-        console.log(myDate.toLocaleString());
         return <h2>{myDate.toLocaleString()}</h2>
     }
 
     render() {
 
+
+            
+        const tsunami = (statement,name) => {
+          if(statement === 1){
+            console.log("statement = " + statement + " name = " + name);
+              return (
+                  <div>
+                    <h2><div class="warning-msg">Alert:</div> Tsunami statement issued check <a href="https://www.tsunami.gov/" target="_blank" variant="primary">tsunami.gov</a> or local media</h2>
+                 </div>
+              )
+          }
+      }
+  
         if(this.state.loading){
             return (
                 <div>
@@ -56,14 +68,15 @@ export default class Earthquake extends React.Component {
         return (
 
             <div>
-
             {this.state.posts.map(post =>
             (
             <div class="eq-content">
                 <div class="info">
             {this.unixToDate(post['properties']['time'])}
             <h2>{post['properties']['title']}</h2>
-            <Button href={post['properties']['url'] + "/map"} target="_blank" variant="primary">View On USGS Map</Button>
+            <h2>Location: {post['geometry']['coordinates'][1]}, {post['geometry']['coordinates'][0]}</h2>
+            {tsunami(post['properties']['tsunami'],post['properties']['title'])}
+            <Button href={post['properties']['url'] + "/map"} target="_blank" variant="primary">USGS Map</Button>
             </div>
              </div>))
     
