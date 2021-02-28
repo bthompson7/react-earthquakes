@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f662cbe9c88a30e4c9f01c5febd268a1",
+    "revision": "44053a65c06b858df224ca36557884ac",
     "url": "/react-earthquakes/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-earthquakes/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "c0b39c98309a0f2d30d3",
-    "url": "/react-earthquakes/static/css/main.35a6785b.chunk.css"
+    "revision": "b3afbae677edd89e7400",
+    "url": "/react-earthquakes/static/css/main.17295e06.chunk.css"
   },
   {
     "revision": "b03cc488d968ec44e349",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-earthquakes/static/js/2.6ff7a624.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c0b39c98309a0f2d30d3",
-    "url": "/react-earthquakes/static/js/main.0e3d103b.chunk.js"
+    "revision": "b3afbae677edd89e7400",
+    "url": "/react-earthquakes/static/js/main.2b597924.chunk.js"
   },
   {
     "revision": "b9da9cc86345be27d85c",
